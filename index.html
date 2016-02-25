@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title>samples for perspective and rotation</title>
+    <style>
+      img {
+        float: left;
+        height: 100px;
+        width: 100px;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      .perspective {
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        perspective: 1000px;
+        -webkit-transform-style: translate-3d;
+        -moz-transform-style: translate-3d;
+        transform-style: translate-3d;
+      }
+
+      .button {
+        display: block;
+        margin: 0 auto;
+      }
+
+      #js-frame-1,
+      #js-frame-2 {
+        float: left;
+        height: 350px;
+        width: 300px;
+      }
+      #js-frame-1 + #js-frame-2 {
+        margin-left: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix">
+    
+      <div id="js-frame-1" class="perspective clearfix">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <img src="image.jpg" alt="">
+        <input id="js-frame-1-button" class="button" type="button" value="rotate">
+      </div>
+
+      <div id="js-frame-2" class="clearfix">
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <div class="perspective"><img src="image.jpg" alt=""></div>
+        <input id="js-frame-2-button" class="button" type="button" value="rotate">
+      </div>
+
+    </div>
+
+    <script src="velocity.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
